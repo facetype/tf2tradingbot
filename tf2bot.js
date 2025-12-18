@@ -15,22 +15,22 @@ const logOnOptions = {
 
 client.logOn(logOnOptions);
 
-/* -------- HUSKELISTE --------
+/* -------- NOTES --------
 appid
 tf2 = 440
 cs2 = 730
 
-classid er det som trengs for å identifisere itemet, alle keys har samme classid, assetid er forskjellige for
-samme item
+
+classid is whats needed to identify item, all keys have same classid, assetid is different for same item (?)
 
 
 -------- TODO --------
-js script for å generere identity og shared secret
-kjøpe simkort for engangsbruk til å linke telefonnummer til steam konto
+
+
 
 */
 
-// finne item-ids for alt jeg skal trade
+// finding item-ids
 client.on('tradeOffers', (offers) => {
     for (const offer of offers) {
         for (const item of offer.itemsToReceive) {
